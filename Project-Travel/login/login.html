@@ -1,0 +1,63 @@
+login.html
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to KaeL Travel</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="login-box">
+
+            <div class="logo">
+                <h1>KaeL Travel</h1>
+                <p>Jelajahi Destinasi Impianmu</p>
+            </div>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" id="username" placeholder="Username/E-mail" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+
+                <button type="submit">Login</button>
+            </form>
+
+
+            <div class="register-link">
+                Belum punya akun?
+                <a href="#">Daftar</a>
+            </div>
+            </form>
+
+        </div>
+    </div>
+    <script>
+        document.getElementById("loginForm").addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "KaeL" && password === "123454321") {
+                window.location.href = '../dashboard.html';
+            } else {
+                alert("Username atau password salah!");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
